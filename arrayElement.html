@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>arrayElement</title>
+</head>
+<style>
+    body{
+        padding-top:50px;
+    }
+</style>
+<body>
+<h2>Sample screen</h2>
+<input type="text>" id="hienthi">
+<input type="button" value="add" onclick="ad();">
+<input type="button" value="display" onclick="show();">
+<div id="result"></div>
+<script>
+    let x=0;
+    let array=[mescedes,bugatti,lamborghini, ferrari];
+    function ad(){
+        array[x]=document.getElementById("hienthi").value;
+        alert("Element: "+ array[x] + "add in index" + x);
+        x++;
+        document.getElementById("hienthi").value=" "
+    }
+    function show(){
+        let e= "<hr>"
+        for(let i=0; i<array.length;i++){
+            e+="Element"+i+"="+array[i]+"<br>";
+        }
+        document.getElementById("result").innerHTML=e;
+    }
+</script>
+</body>
+</html>
